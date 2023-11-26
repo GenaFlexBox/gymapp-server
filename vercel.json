@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "env": {
+        "DATABASE_URL": "postgresql://aazborru:1EmBU7Qi__6NYY2MRFGO1-OkSyXlVQNt@cornelius.db.elephantsql.com:5432/aazborru?schema=public",
+        "SHADOW_DATABASE_URL": "postgresql://aazborru:1EmBU7Qi__6NYY2MRFGO1-OkSyXlVQNt@cornelius.db.elephantsql.com:5432/aazborru?schema=public",
+        "GOOGLE_CLIENT_ID": "910131224598-ehg5siojfdnj4k0ipi404epggde794ei.apps.googleusercontent.com",
+        "GOOGLE_SECRET": "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",
+        "SESSION_SECRET": "SECRETKEY-44861s"
+    },
+    "builds": [
+        {
+            "src": "src/main.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/main.ts",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}
