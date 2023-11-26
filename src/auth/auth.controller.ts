@@ -17,7 +17,7 @@ export class AuthController {
   @UseGuards(GoogleAuthGuards)
   @Redirect()
   async handlerRedirect(@Res() res) {
-    return res.redirect('http://localhost:19006/');
+    return res.redirect('http://192.168.1.206:19006/');
   }
 
   @Get('status')
